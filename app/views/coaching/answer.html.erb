@@ -1,0 +1,23 @@
+<div class="answer"><p><em>You - </em><%= @question %></p>
+
+
+<p> <em>Your coach -</em><%= if @question.upcase == @question
+			"I can feel your motivation!"
+		 else 
+			''
+		 end %></p>
+
+<p> <em>Your coach -</em><%= if @question.downcase == "i am going to work right now!"
+			@coach_answer = ''
+			''
+		 elsif @question.end_with?("?")
+			@coach_answer = "Silly question, get dressed and go to work!"
+			"Silly question, get dressed and go to work!"
+		 else
+			@coach_answer = "I don't care, get dressed and go to work!"
+			"I don't care, get dressed and go to work!"
+		 end %></p>
+		 
+<p id="otherquestion"><%= link_to "Ask another question", ask_path %></p>
+</div>
+<hr>
